@@ -1,0 +1,11 @@
+{
+  "packages": {
+    "@appmaker-packages/extension-pragma-checkout": "packages/pragma-checkout"
+  },
+  "defaultPackage": "@appmaker-packages/extension-pragma-checkout",
+  "sdk": {
+    "version": "latest",
+    "name": "staging",
+    "currentVersion": "2.6.0-staging-2405.7.2109"
+  }
+}

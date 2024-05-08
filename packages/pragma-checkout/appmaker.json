@@ -1,0 +1,10 @@
+{
+    "type": "extension",
+    "id": "clvtfncgq003w4m0jd8b598rz",
+    "handle": "pragma-checkout",
+    "name": "PragmaCheckout",
+    "package": {
+        "id": "clvtfnch9003y4m0j2xa1hh1b",
+        "name": "@appmaker-packages/extension-pragma-checkout"
+    }
+}
