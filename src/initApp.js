@@ -7,5 +7,5 @@ import { activateLocalTheme, activateLocalExtension } from '@appmaker-xyz/core';
 
 import '@appmaker-packages/extension-pragma-checkout';
     
-activateLocalExtension(
-        {"id":"pragma-checkout","settings":{}});
+// activateLocalExtension(
+//         {"id":"pragma-checkout","settings":{}});
