@@ -2,12 +2,12 @@ import axios from 'axios';
 import { encode } from 'base-64';
 
 export const getOneClickCheckoutUrl = async (checkoutObject) => {
-  const API_KEY_1C = '817c91a5-4406-4210-893d-53f46a491e03';
+  const API_KEY_1C = 'a2b4e755-6990-4fa8-a266-7c44a188df1e';
   let encodedResponse = '';
   let appmakerObject = { appmaker: true, ...checkoutObject };
   await axios
     .post(
-      'https://api.test.1checkout.ai/create',
+      'https://api.1checkout.ai/create',
       JSON.stringify(appmakerObject),
       {
         headers: {
@@ -30,7 +30,7 @@ export const getOneClickCheckoutUrl = async (checkoutObject) => {
       console.error('An error occurred:', error);
     });
 
-  const url = `https://pay.test.1checkout.ai/v3/checkout/widget/?showerror=false&checkout_type=checkout&containerheight=720&apikey=${API_KEY_1C}&response=${encodedResponse}`; // replace this with your url
+  const url = `https://pay.1checkout.ai/v3/checkout/widget/?showerror=false&checkout_type=checkout&containerheight=720&apikey=${API_KEY_1C}&response=${encodedResponse}`; // replace this with your url
   return url;
 };
 
