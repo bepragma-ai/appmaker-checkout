@@ -44,7 +44,6 @@ export const customPaymentSchema = {
     /upi:\/\/pay?.*/i,
     /tez:\/\/upi\/pay?.*/i,
     /.*\.razorpay\.com*/i,
-    /.*\.1checkout\.ai*/i,
   ],
   action: (url) => {
     return {

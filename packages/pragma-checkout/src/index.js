@@ -13,7 +13,6 @@ const PragmaCheckout = {
 };
 
 export function activate(params) {
-  console.log("yooooooooo");
   appmakerFunctions.registerAppmakerFn({
     trigger: 'before-open-checkout', // hook to trigger before opening checkout
     namespace: 'oneclick-update-checkout', // namespace for the function
