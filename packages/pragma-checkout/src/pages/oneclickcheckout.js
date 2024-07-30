@@ -9,15 +9,6 @@ function isAuthenticatePage(url){
   return isAuthenticatePage.test(url);
 }
 
-function extractOrderNumbers(url) {
-  const regex = /\/(\d+)\/orders\/(\w+)/;
-  const match = url.match(regex);
-  if (match) {
-    return { order_key: match[1], order_id: match[2] };
-  }
-  return null;
-}
-
 const parseQueryString = (queryString) => {
   const params = {};
   const queries = queryString.split('&');
@@ -32,18 +23,20 @@ const parseQueryString = (queryString) => {
 
 var params = [];
 var orderKey = '';
+var orderID = '';
 
 const onUrlChange = (url, onAction) => {
   if(isAuthenticatePage(url)){
-    params = parseQueryString(url.split('?')[1])
+    params = parseQueryString(url.split('?')[1]);
     orderKey = params['key'];
+    orderID = params['order_id'];
   }
+
   if (isOrderCompleted(url)) {
-    const orderDetails = extractOrderNumbers(url);
     onAction({
       action: 'SET_ORDER_COMPLETE',
       params: {
-        orderID: orderDetails.order_id,
+        orderID,
         orderKey,
       },
     });
