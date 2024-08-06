@@ -46,7 +46,6 @@
       /paytmmp:\/\/pay?.*/i,
       /upi:\/\/pay?.*/i,
       /tez:\/\/upi\/pay?.*/i,
-      /.*\.razorpay\.com*/i,
     ],
     action: (url) => {
       return {
